@@ -1,6 +1,6 @@
 'use strict';
 const os = require('os');
-const APP_NAME = 'task-queue-92d0c7';
+const APP_NAME = 'task-queue-054671';
 const VERSION = '1.0.0';
 class UtaskUqueueHandler {
   constructor(options = {}) {
